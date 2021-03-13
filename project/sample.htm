@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+table, th, td {
+  border: 0px solid black;
+  border-collapse: collapse;
+  height:63.5px;
+  text-align:center;
+  table-layout:fixed;
+}
+table{
+width:100%;
+}
+#input{
+text-align:center;
+background-color: transparent;
+border:0px solid;
+color:#847E7D;
+font-size:30px;
+}
+#topic
+{
+font-size:100px;
+font-family:you murder;
+}
+#data{
+padding:0px;
+margin:0px;
+border-spacing: 10px;
+}
+#score{
+color:#847E7D;
+font-size:50px;
+}
+
+.img {
+  display: none;
+}
+#close{
+float:right;
+padding-right: 100px;
+}
+#restart{
+float:left;
+  padding-left: 100px;
+}
+td:hover .img {
+  display: inline;
+}
+td{
+cursor:cell;
+}
+body{
+background-image: url('horror2.jpeg');
+background-repeat: no-repeat;
+color:white;
+}
+</style>
+<!-- body{
+background-image: url('horror2.jpeg');
+background-repeat: no-repeat;
+color:white;
+}
+.img {
+  display: none;
+}
+
+td:hover .img {
+  display: inline;
+}
+
+ -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+<table>
+<tr><!-- Row  1 -->
+<td><img class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>   <!-- Row  2 -->
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>   <!-- Row  3 -->
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+</tr>
+<tr>   <!-- Row  4 -->
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>	
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>   <!-- Row  5 -->
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>   <!-- Row  6 -->
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td colspan="7" rowspan="5" id="data"><center>
+<!--<span id="topic"><marquee>Ghost Hunter!!</marquee></span>-->
+<img src="ghost.png"><br><br>
+<!--<h1 id="score">Score:-</h1>-->
+<img src="score.png"><br>
+<input type="text" id="input" placeholder="0" disabled></center>
+<br>
+<img id="restart" onclick="myfun1()" src="restart.png"><img id="close" onclick="myfun()" src="close.png">
+</td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+</tr>
+<tr>   <!-- Row  7 -->
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>    <!-- Row  8 -->
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>    <!-- Row  9 -->
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>    <!-- Row  10 -->
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>    <!-- Row  11 -->
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+</tr>
+<tr>    <!-- Row  12 -->
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>    <!-- Row  13 -->
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>    <!-- Row  14 -->
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+<td></td>
+<td></td>
+<td><img onclick="myFunction()" class="img" src="ghost.jpg" cellspacing="0" cellpadding="0" width="50" height="50"></td>
+<td></td>
+</tr>
+</table>
+<script>
+count=1;
+$(document).ready(function(){
+  $(".img").click(function(){
+    $(this).hide();
+    $("#input").val(count++);
+  });
+});
+
+function myfun() {
+  var r = confirm("Do you want to Exit??");
+  if (r == true) {
+    window.location.href = "index.htm";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+}
+function myfun1() {
+  var r = confirm("Do you want to Restart??");
+  if (r == true) {
+    window.location.href = "sample.htm";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+}
+</script>
+</body>
+</html>
